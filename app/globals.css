@@ -1,24 +1,35 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@font-face {
+  font-family: "wosker";
+  src: url("/fonts/wosker.otf") format("opentype"); /* Correct URL path */
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary: linear-gradient(45deg, #f54b64, #f78361);
+  --dark: #130f00;
+  --text: #e9e9e9;
+}
+body {
+  color: var(--text);
+  overflow-x: hidden;
+}
+h1 {
+  font-family: "wosker";
+  font-size: clamp(2rem, 4vw + 1rem, 6rem);
+}
+p {
+  font-family: "";
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.bg-brand {
+  background: var(--primary);
 }
 
+.bg-dark {
+  background: var(--dark);
+}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.text {
+  color: var(--text);
 }

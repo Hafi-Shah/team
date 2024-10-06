@@ -1,13 +1,13 @@
 // pages/index.tsx
 import React from "react";
 import Link from "next/link";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Team } from "./layout/team/team";
+import { motion } from "framer-motion";
 const HomePage: React.FC = () => {
   return (
     <div>
-      <h1>Welcome to Next.js with TypeScript</h1>
-
-      <Link href="/about">Go to About Page</Link>
+      <Team />
     </div>
   );
 };
